@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>What time is it?</title>
+
+        <style>
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:#111;
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70vw; height: 35vh;
+    text-align: center;
+    background: rgba(255, 255, 255, .1);
+    color: white;
+    
+    font-size: 20px;
+    font-family: serif-sans;
+    border: 5px solid cyan;
+    border-radius: 40px;
+    
+    box-shadow: -5px -5px 100px cyan;
+}
+
+#hora {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 15px;
+    font-size: 25px;
+    margin: 40px 20px; padding: 20px;
+}
+        </style>
+    </head>
+    
+    <body>
+    
+        <div class="container">
+            <h1>Welcome</h1>
+            <p id="hora"></p>
+        </div> 
+        
+        <script>
+        
+let hora = document.getElementById('hora');
+
+
+function horaActual() {
+    let t = new Date();
+    
+    let min = String(t.getMinutes());
+    let m = min.length == 1 ? '0':''
+    
+    let sec = String(t.getSeconds());
+    let s = sec.length == 1 ? '0':''
+    
+    hora.innerHTML = t.getHours() + " : " + m+min + " : " + s+sec;
+}
+
+setInterval(horaActual, 100);
+
+        </script>
+    </body>
+    
+</html>
+
+<!-- De: Francisco Vélez -->
