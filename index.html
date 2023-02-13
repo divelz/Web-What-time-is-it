@@ -56,7 +56,7 @@ body {
         
 let hora = document.getElementById('hora');
 
-function horaActual() {
+function CurrentTime() {
     let t = new Date();
     
     let min = String(t.getMinutes());
@@ -68,11 +68,11 @@ function horaActual() {
     hora.innerHTML = t.getHours() + " : " + m+min + " : " + s+sec;
 }
 
-setInterval(horaActual, 100);
+setInterval(CurrentTime, 100);
 
         </script>
     </body>
     
 </html>
 
-<!-- De: Francisco Vélez -->
+<!-- Author: Francisco Vélez -->
